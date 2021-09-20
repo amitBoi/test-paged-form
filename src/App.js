@@ -22,6 +22,16 @@ const INIT_STATE = [
     question: "What is your first org?",
     answer: "",
   },
+  {
+    id: "q5",
+    question: "How much experience do you have?",
+    answer: "",
+  },
+  {
+    id: "q6",
+    question: "What are your tech stacks?",
+    answer: "",
+  },
 ];
 function App() {
   const [allQuestions, setAllQuestions] = useState(INIT_STATE);
@@ -66,6 +76,7 @@ function App() {
         }
         id="box1"
       />
+      <br />
       <label htmlFor="box2">
         {allQuestions[currentPageIdentifier + 1].question}
       </label>
@@ -77,6 +88,7 @@ function App() {
         }
         id="box2"
       />
+      <br />
       <button onClick={goPrev} disabled={isPrevAvailable()}>
         Prev
       </button>
